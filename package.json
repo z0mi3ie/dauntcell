@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "rm ./dauntcell.db && node createdb.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,6 +19,8 @@
   "homepage": "https://github.com/z0mi3ie/dauntcell#readme",
   "dependencies": {
     "js-yaml": "^3.13.1",
-    "sqlite3": "^4.1.1"
+    "sqlite-async": "^1.0.12",
+    "sqlite3": "^4.1.1",
+    "uuid": "^3.3.3"
   }
 }

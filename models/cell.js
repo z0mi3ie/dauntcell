@@ -1,9 +1,9 @@
 class Cell {
-    constructor(name, description, type, levels) {
+    constructor(name, description, type, levels_id) {
         this.name = name;
         this.description = description;
         this.type = type;
-        this.levels = levels;
+        this.levels_id = levels_id;
     }
 }
 
