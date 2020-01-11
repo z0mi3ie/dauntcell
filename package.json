@@ -1,0 +1,24 @@
+{
+  "name": "dauntcell",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/z0mi3ie/dauntcell.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/z0mi3ie/dauntcell/issues"
+  },
+  "homepage": "https://github.com/z0mi3ie/dauntcell#readme",
+  "dependencies": {
+    "js-yaml": "^3.13.1",
+    "sqlite3": "^4.1.1"
+  }
+}
