@@ -1,0 +1,570 @@
+---
+#
+# Defence
+#
+- name: Assassin's Vigour
+  description: Grants Health after breaking a Behemoth part.
+  type: Defence
+  levels: 
+    - Heal 50 when you break a part. 
+    - Heal 100 when you break a part. 
+    - Heal 150 when you break a part. 
+    - Heal 200 when you break a part. 
+    - Heal 250 when you break a part. 
+    - Heal 300 when you break a part. 
+- name: Bloodless
+  description: Protects against Wounded and Crippling Wounds statuses.
+  type: Defence
+  levels:
+    - Reduces duration of Wounded status by 50%.
+    - Reduces duration of Wounded status by 80%. 
+    - Immune to Wounded status.
+    - Reduces effectiveness of Crippling Wounded status by 50%. Immune to Wounded status.
+    - Reduces effectiveness of Crippling Wounded status by 80%. Immune to Wounded status.  
+    - Immune to Wounded status. Immune to Crippling Wound status. 
+- name: Fireproof
+  description: Protects against being set on fire.
+  type: Defence
+  levels:
+    - Reduces duration of On Fire status by 10%. 
+    - Reduces duration of On Fire status by 20%. 
+    - Reduces duration of On Fire status by 40%. 
+    - Reduces duration of On Fire status by 60%. 
+    - Reduces duration of On Fire status by 80%. 
+    - Immune to being set on fire. 
+- name: Fortress
+  description: Grants a small shield after avoiding damage for a short time. 
+  type: Defence
+  levels:
+    - Grants a 10 health shield after not getting hit for 10s. 
+    - Grants a 20 health shield after not getting hit for 10s. 
+    - Grants a 40 health shield after not getting hit for 10s. 
+    - Grants a 60 health shield after not getting hit for 10s. 
+    - Grants a 80 health shield after not getting hit for 10s. 
+    - Grants a 100 health shield after not getting hit for 10s. 
+- name: Guardian
+  description: Grants a portion of any shield applied to you to your nearest ally. 
+  type: Defence
+  levels:
+    - +10% of any shield applied to you is also applied to your nearest ally for 15s. 
+    - +20% of any shield applied to you is also applied to your nearest ally for 15s. 
+    - +30% of any shield applied to you is also applied to your nearest ally for 15s. 
+    - +40% of any shield applied to you is also applied to your nearest ally for 15s. 
+    - +50% of any shield applied to you is also applied to your nearest ally for 15s. 
+    - +60% of any shield applied to you is also applied to your nearest ally for 15s. 
+- name: Iceborne
+  description: Increases Defense when at low health, and at later ranks, grants life steal. 
+  type: Defence
+  levels:
+    - When under 50% health, grants +5% decreased damage taken. 
+    - When under 50% health, grants +10% decreased damage taken. 
+    - When under 50% health, grants +15% decreased damage taken. 
+    - When under 50% health, grants +20% decreased damage taken. While Iceborne is active, grants 4% lifesteal that cannot heal beyond 50% health.
+    - When under 50% health, grants +25% decreased damage taken. While Iceborne is active, grants 6% lifesteal that cannot heal beyond 50% health.
+    - When under 50% health, grants +30% decreased damage taken. While Iceborne is active, grants 8% lifesteal that cannot heal beyond 50% health.
+- name: Insulated
+  description: Protects against Shocked status effect and allows you to attack electric shields. 
+  type: Defence
+  levels:
+    - Reduces duration of Shocked status by 25%. 
+    - Reduces duration of Shocked status by 50%. 
+    - Reduces duration of Shocked status by 75%. 
+    - Reduces duration of Shocked status by 75%. Reduces knockback and damage of hitting electrified shields.
+    - Reduces duration of Shocked status by 75%. Prevents knockback and damage when hitting electrified shields.
+    - Immune to Shocked status. Prevents knockback and damage when hitting electrified shields.
+- name: Nine Lives
+  description: Grants a chance to reduce damage, and later the ability to cheat death. 
+  type: Defence
+  levels:
+    - +5% chance to halve incoming damage 
+    - +8% chance to halve incoming damage 
+    - +12% chance to halve incoming damage 
+    - +12% chance to halve incoming damage. The first time you would be knocked out, stay up and heal for 400.
+    - +16% chance to halve incoming damage. The first time you would be knocked out, stay up and heal for 400.
+    - +20% chance to halve incoming damage. The first time you would be knocked out, stay up and heal for 400, and become empowered for 10 seconds.
+- name: Shellshock Resist
+  description: Protects against the explosion damage and status effect Shellshock. 
+  type: Defence
+  levels:
+    - Reduces Shell Shocked explosion damage and status effect duration by 10%. 
+    - Reduces Shell Shocked explosion damage and status effect duration by 20%. 
+    - Reduces Shell Shocked explosion damage and status effect duration by 40%. 
+    - Reduces Shell Shocked explosion damage and status effect duration by 60%. 
+    - Reduces Shell Shocked explosion damage and status effect duration by 80%. 
+    - Immune to Shell Shocked explosion damage and status effect.
+- name: Strategist
+  description: Reduces max health. Dodging through Behemoth attacks grants health shields to all Slayers. 
+  type: Defence
+  levels:
+    - -50 max health, After dodging through an attack, grant 25 health shield to all slayers.
+    - -100 max health, After dodging through an attack, grant 50 health shield to all slayers. 
+    - -150 max health, After dodging through an attack, grant 75 health shield to all slayers. 
+    - -200 max health, After dodging through an attack, grant 100 health shield to all slayers. 
+    - -250 max health, After dodging through an attack, grant 125 health shield to all slayers. 
+    - -300 max health, After dodging through an attack, grant 150 health shield to all slayers. 
+- name: Sturdy
+  description: Prevents being staggered on a cooldown. 
+  type: Defence
+  levels:
+    - Prevents you from being staggered (120 second cooldown).
+    - Prevents you from being staggered (100 second cooldown). 
+    - Prevents you from being staggered (80 second cooldown). 
+    - Prevents you from being staggered (60 second cooldown). 
+    - Prevents you from being staggered (40 second cooldown). 
+    - Prevents you from being staggered (15 second cooldown). 
+- name: Tough
+  description: Increases Max Health. 
+  type: Defence
+  levels:
+    - Increases Max Health by 50. Increased healing from all sources by 5%. 
+    - Increases Max Health by 100. Increased healing from all sources by 10%.
+    - Increases Max Health by 150. Increased healing from all sources by 15%.
+    - Increases Max Health by 250. Increased healing from all sources by 25%.
+    - Increases Max Health by 350. Increased healing from all sources by 35%.
+    - Increases Max Health by 500. Increased healing from all sources by 50%.
+- name: Warmth
+  description: Protects against Chilled and Frozen status effects.
+  type:  Defence
+  levels:
+    - Reduces duration of Frozen status by 30%. 
+    - Reduces duration of Frozen status by 60%. 
+    - Immune to being Frozen. 
+    - Reduces duration of Chilled status by 30%. Immune to being Frozen.
+    - Reduces duration of Chilled status by 60%. Immune to being Frozen.
+    - Immune to being Frozen. Immune to being Chilled. 
+
+#
+# Mobility
+#
+- name: Agility
+  description: Reduces the stamina cost of dodging. 
+  type: Mobility 
+  levels:
+    - -10% Dodge Roll Stamina Cost 
+    - -20% Dodge Roll Stamina Cost 
+    - -30% Dodge Roll Stamina Cost 
+    - -40% Dodge Roll Stamina Cost 
+    - -55% Dodge Roll Stamina Cost 
+    - -70% Dodge Roll Stamina Cost 
+- name: Conditioning
+  description: Increases Stamina Regen. 
+  type: Mobility
+  levels:
+    - +5 Stamina Regeneration.
+    - +10 Stamina Regeneration.
+    - +15 Stamina Regeneration.
+    - +20 Stamina Regeneration. 
+    - +25 Stamina Regeneration. 
+    - +30 Stamina Regeneration.
+- name: Endurance
+  description: Increases Max Stamina.  
+  type: Mobility
+  levels:
+    - Increases Max Stamina by 10.
+    - Increases Max Stamina by 20. 
+    - Increases Max Stamina by 40.
+    - Increases Max Stamina by 60. 
+    - Increases Max Stamina by 80.
+    - Increases Max Stamina by 100.
+- name: Evasion
+  description: Increases the time you are invincible when dodging. 
+  type: Mobility
+  levels:
+    - Increases Dodge invulnerability windows by 7%.
+    - Increases Dodge invulnerability windows by 14%.
+    - Increases Dodge invulnerability windows by 21%. 
+    - Increases Dodge invulnerability windows by 28%. 
+    - Increases Dodge invulnerability windows by 35%. 
+    - Increases Dodge invulnerability windows by 42%. 
+- name: Fleet Footed
+  description: Temporarily increases Movement Speed after a dodge. 
+  type: Mobility
+  levels:
+    - Following a Dodge, Movement Speed is increased by 10% for 3 seconds. 
+    - Following a Dodge, Movement Speed is increased by 15% for 3 seconds. 
+    - Following a Dodge, Movement Speed is increased by 20% for 3 seconds. 
+    - Following a Dodge, Movement Speed is increased by 25% for 3 seconds. 
+    - Following a Dodge, Movement Speed is increased by 30% for 3 seconds. 
+    - Following a Dodge, Movement Speed is increased by 35% for 3 seconds. 
+- name: Grace
+  description: Grants movespeed when sprinting. After sprinting gain attack speed equal to movespeed for a short time.
+  type: Mobility
+  levels:
+    - While sprinting, gain movespeed up to 5% 
+    - While sprinting, gain movespeed up to 8% 
+    - While sprinting, gain movespeed up to 11% 
+    - While sprinting, gain movespeed up to 14%. After sprinting, gain attack speed equal to Grace's bonus movespeed for 10 seconds.
+    - While sprinting, gain movespeed up to 17%. After sprinting, gain attack speed equal to Grace's bonus movespeed for 10 seconds.
+    - While sprinting, gain movespeed up to 20%. After sprinting, gain attack speed equal to Grace's bonus movespeed for 10 seconds.
+- name: Nimble
+  description: Restores Stamina when dodging through behemoth attacks.   
+  type: Mobility
+  levels:
+    - Gain 10 stamina after dodging through an attack. 
+    - Gain 15 stamina after dodging through an attack. 
+    - Gain 20 stamina after dodging through an attack. 
+    - Gain 25 stamina after dodging through an attack. 
+    - Gain 30 stamina after dodging through an attack. 
+    - Gain 35 stamina after dodging through an attack. 
+- name: Sprinter
+  description: Reduces max stamina. Dodging through Behemoth attacks grants movement speed. 
+  type: Mobility
+  levels:
+    - -5 max stamina. +5% movement speed and -5% reduced sprint cost. 
+    - -10 max stamina. +7.5% movement speed and -7.5% reduced sprint cost. 
+    - -15 max stamina. +10% movement speed and -10% reduced sprint cost.
+    - -20 max stamina. +12.5% movement speed and -12.5% reduced sprint cost.
+    - -25 max stamina. +15% movement speed and -15% reduced sprint cost.
+    - -30 max stamina. +17.5% movement speed and -17.5% reduced sprint cost.
+- name: Swift
+  description: Increases Movement Speed when your weapon is sheathed. 
+  type: Mobility
+  levels:
+    - While sheathed, increases Movement Speed by 5%. 
+    - While sheathed, increases Movement Speed by 10%. 
+    - While sheathed, increases Movement Speed by 15%. 
+    - While sheathed, increases Movement Speed by 20%. 
+    - While sheathed, increases Movement Speed by 25%. 
+    - While sheathed, increases Movement Speed by 30%. Also affects other nearby Slayers. 
+
+#
+# Power
+#
+- name: Aetherhunter
+  description: Increases damage against aether charged Behemoths. 
+  type: Power 
+  levels:
+    - +5% Damage vs Aether-charged Behemoths
+    - +10% Damage vs Aether-charged Behemoths
+    - +20% Damage vs Aether-charged Behemoths
+    - +30% Damage vs Aether-charged Behemoths
+    - +40% Damage vs Aether-charged Behemoths
+    - +50% Damage vs Aether-charged Behemoths
+- name: Deconstruction
+  description: Bonus damage against objects created by Behemoths. 
+  type: Power
+  levels:
+    - Deal 110% damage to objects created by Behemoths.
+    - Deal 120% damage to objects created by Behemoths.
+    - Deal 130% damage to objects created by Behemoths.
+    - Deal 150% damage to objects created by Behemoths.
+    - Deal 170% damage to objects created by Behemoths.
+    - Deal 200% damage to objects created by Behemoths.
+- name: Discipline
+  description: Prevents you from having over half health. Increases critical strike chance. 
+  type: Power 
+  levels:
+    - +2.5% critical strike chance. Health is limited to 50% of max health.
+    - +5% critical strike chance. Health is limited to 50% of max health.
+    - +7.5% critical strike chance. Health is limited to 50% of max health.
+    - +10% critical strike chance. Health is limited to 50% of max health.
+    - +12.5% critical strike chance. Health is limited to 50% of max health.
+    - +15% critical strike chanceHealth is limited to 50% of max health.
+- name: Knockout King
+  description: Percent increase to Stagger damage.
+  type: Power 
+  levels:
+    - 5% Stagger Damage 
+    - 10% Stagger Damage 
+    - 15% Stagger Damage 
+    - 20% Stagger Damage. After dodging through an attack, you next attack deals +50% stagger damage.
+    - 25% Stagger Damage. After dodging through an attack, you next attack deals +50% stagger damage.
+    - 30% Stagger Damage. After dodging through an attack, you next attack deals +100% stagger damage.
+- name: Overpower
+  description: Increases damage against staggered Behemoths. 
+  type: Power 
+  levels:
+    - +10% damage vs staggered Behemoths. 
+    - +20% damage vs staggered Behemoths. 
+    - +30% damage vs staggered Behemoths. 
+    - +40% damage vs staggered Behemoths. 
+    - +50% damage vs staggered Behemoths. 
+    - +60% damage vs staggered Behemoths. 
+- name: Pacifier
+  description: Increases Stagger damage against enraged Behemoths.  
+  type: Power 
+  levels:
+    - +10% Stagger vs Enraged Behemoths. 
+    - +20% Stagger vs Enraged Behemoths. 
+    - +30% Stagger vs Enraged Behemoths. 
+    - +40% Stagger vs Enraged Behemoths. 
+    - +50% Stagger vs Enraged Behemoths. 
+    - +60% Stagger vs Enraged Behemoths. 
+- name: Rage
+  description: Increases your damage when your health is low. 
+  type: Power 
+  levels:
+    - When under 50% health, deal +5% damage. 
+    - When under 50% health, deal +8% damage. 
+    - When under 50% health, deal +12% damage. 
+    - When under 50% health, deal +16% damage. 
+    - When under 50% health, deal +20% damage. 
+    - When under 50% health, deal +25% damage. 
+- name: Ragehunter
+  description: Increases damage against enraged Behemoths. 
+  type: Power 
+  levels:
+    - +5% Damage vs Enraged Behemoths. 
+    - +10% Damage vs Enraged Behemoths. 
+    - +15% Damage vs Enraged Behemoths. 
+    - +20% Damage vs Enraged Behemoths. 
+    - +30% Damage vs Enraged Behemoths. 
+    - +40% Damage vs Enraged Behemoths. 
+- name: Sharpened
+  description: Percent increase to part damage. 
+  type: Power 
+  levels:
+    - +5% Part Damage. 
+    - +10% Part Damage. 
+    - +15% Part Damage. 
+    - +20% Part Damage. After dodging through an attack, the next weapon attack's Part Break Damage is increased by 50%.
+    - +25% Part Damage. After dodging through an attack, the next weapon attack's Part Break Damage is increased by 50%.
+    - +30% Part Damage. After dodging through an attack, the next weapon attack's Part Break Damage is increased by 100%.
+
+#
+# Technique
+#
+- name: Acidic
+  description: Increases Wound damage at the cost of Part damage.
+  type: Technique
+  levels:
+    - Converts 30% of Part Damage to Wound Damage.
+    - Converts 40% of Part Damage to Wound Damage. 
+    - Converts 50% of Part Damage to Wound Damage.
+    - Converts 50% of Part Damage to Wound Damage. +10% Part damage.
+    - Converts 50% of Part Damage to Wound Damage. +15% Part damage. 
+    - Converts 50% of Part Damage to Wound Damage. +20% Part damage. 
+- name: Adrenaline
+  description: Increases damage dealt based on stamina spent. 
+  type: Technique
+  levels:
+    - Grants 0.3% increased damage for every 10 stamina missing.
+    - Grants 0.6% increased damage for every 10 stamina missing.
+    - Grants 0.9% increased damage for every 10 stamina missing.
+    - Grants 1.2% increased damage for every 10 stamina missing.
+    - Grants 1.5% increased damage for every 10 stamina missing.
+    - Grants 1.8% increased damage for every 10 stamina missing.
+- name: Barbed
+  description: Adds a flat amount of Wound damage on hit. 
+  type: Technique
+  levels:
+    - +5 wound damage on hit. 
+    - +10 wound damage on hit.
+    - +15 wound damage on hit. 
+    - +20 wound damage on hit. After dodging through an attack, the next attack's expose damage is increased by 200.
+    - +30 wound damage on hit. After dodging through an attack, the next attack's expose damage is increased by 200.
+    - +40 wound damage on hit. After dodging through an attack, the next attack's expose damage is increased by 400.
+- name: Berserker
+  description: Reduces max health. Dealing damage stacks increased damage dealt for a short period. 
+  type: Technique
+  levels:
+    - -50 max health. After dealing damage, gain +1% damage for 3 seconds. Stacks 10 times.
+    - -100 max health. After dealing damage, gain +1.5% damage for 3 seconds. Stacks 10 times.
+    - -150 max health. After dealing damage, gain +2% damage for 3 seconds. Stacks 10 times.
+    - -200 max health. After dealing damage, gain +2.5% damage for 3 seconds. Stacks 10 times.
+    - -250 max health. After dealing damage, gain +3% damage for 3 seconds. Stacks 10 times. 
+    - -300 max health. After dealing damage, gain +3.5% damage for 3 seconds. Stacks 10 times.
+- name: Bladestorm
+  description: Adds a flat amount of Part damage on hit.  
+  type: Technique
+  levels:
+    - +5 Part Damage on Hit. 
+    - +10 Part Damage on Hit.
+    - +15 Part Damage on Hit.
+    - +20 Part Damage on Hit. +200 Part Damage after dodging through an attack.
+    - +30 Part Damage on Hit. +200 Part Damage after dodging through an attack.
+    -	+40 Part Damage on Hit. +400 Part Damage after dodging through an attack.
+- name: Cunning
+  description: Grants a chance to deal double damage.
+  type: Technique
+  levels:
+    - 2% critical strike chance.
+    - 3% critical strike chance.
+    - 4% critical strike chance.
+    - 5% critical strike chance. +10% critical strike damage.
+    - 7.5% critical strike chance. +20% critical strike damage.
+    - 10% critical strike chance. +30% critical strike damage.
+- name: Evasive Fury
+  description: Temporarily increases attack speed when dodging through a Behemoth's attack. 
+  type: Technique
+  levels:
+    - +7.5% Attack Speed for 16 seconds after dodging through an attack. 
+    - +10% Attack Speed for 16 seconds after dodging through an attack. 
+    - +12.5% Attack Speed for 16 seconds after dodging through an attack. 
+    - +15% Attack Speed for 16 seconds after dodging through an attack. 
+    - +17.5% Attack Speed for 16 seconds after dodging through an attack. 
+    - +20% Attack Speed for 16 seconds after dodging through an attack. 
+- name: Merciless
+  description: Increases Wound damage against staggered Behemoths. 
+  type: Technique
+  levels:
+    - +25 Wound Damage vs Staggered Behemoths.
+    - +40 Wound Damage vs Staggered Behemoths. 
+    - +55 Wound Damage vs Staggered Behemoths. 
+    - +70 Wound Damage vs Staggered Behemoths. 
+    - +85 Wound Damage vs Staggered Behemoths. 
+    - +100 Wound Damage vs Staggered Behemoths. 
+- name: Molten
+  description: Grants Molten Heart drops on cooldown. 
+  type: Technique
+  levels:
+    - Dealing damage generates a Molten Heart on a 26 second cooldown.
+    - Dealing damage generates a Molten Heart on a 23 second cooldown.
+    - Dealing damage generates two Molten Hearts on a 23 second cooldown. 
+    - Dealing damage generates two Molten Hearts on a 20 second cooldown.
+    - Dealing damage generates three Molten Hearts on a 20 second cooldown. 
+    - Dealing damage generates three Molten Hearts on a 16 second cooldown.
+- name: Predator
+  description: Increases damage after avoiding damage for a short time. 
+  type: Technique
+  levels:
+    - Deal +4% damage after not getting hit for 15 seconds. Bonus removed when hit.
+    - Deal +8% damage after not getting hit for 15 seconds. Bonus removed when hit. 
+    - Deal +14% damage after not getting hit for 15 seconds. Bonus removed when hit. 
+    - Deal +20% damage after not getting hit for 15 seconds. Bonus removed when hit. 
+    - Deal +27% damage after not getting hit for 15 seconds. Bonus removed when hit. 
+    - Deal +35% damage after not getting hit for 15 seconds. Bonus removed when hit. 
+- name: Savagery
+  description: Increases damage against Wounded parts. 
+  type: Technique
+  levels:
+    - +20% Damage vs Wounded Parts. 
+    - +30% Damage vs Wounded Parts. 
+    - +40% Damage vs Wounded Parts. 
+    - +60% Damage vs Wounded Parts. 
+    - +80% Damage vs Wounded Parts. 
+    - +100% Damage vs Wounded Parts. 
+- name: Weighted Strikes
+  description: Adds a flat amount of Stagger damage on hit. At later ranks, allows more weapon attacks to interrupt. 
+  type: Technique
+  levels:
+    - +5 Stagger Damage on Hit. 
+    - +10 Stagger Damage on Hit. 
+    - +15 Stagger Damage on Hit.
+    - +20 Stagger Damage on Hit. +200 Stagger after dodging through an attack.
+    - +30 Stagger Damage on Hit. +200 Stagger after dodging through an attack. 
+    - +40 Stagger Damage on Hit. +400 Stagger after dodging through an attack. Ranged swings and missiles interrupt unstable Behemoth attacks.
+- name: Wild Frenzy
+  description: Increases Attack Speed when at low health. 
+  type: Technique
+  levels:
+    - When under 50% health, increase attack speed by 7.5%. 
+    - When under 50% health, increase attack speed by 10%. 
+    - When under 50% health, increase attack speed by 12.5%. 
+    - When under 50% health, increase attack speed by 15%. 
+    - When under 50% health, increase attack speed by 17.5%. 
+    - When under 50% health, increase attack speed by 20%. 
+
+#
+# Utility
+#
+- name: Aetherborne
+  description: Increases the benefits of using aether vents. 
+  type: Utility
+  levels:
+    - 25% chance not to consume an Aether Vent charge on use. 25 additional Aether Vent healing.
+    - 25% chance not to consume an Aether Vent charge on use. 50 additional Aether Vent healing.
+    - 25% chance not to consume an Aether Vent charge on use. 75 additional Aether Vent healing.
+    - 25% chance not to consume an Aether Vent charge on use. 100 additional Aether Vent healing.
+    - 25% chance not to consume an Aether Vent charge on use. 150 additional Aether Vent healing.
+    - 25% chance not to consume an Aether Vent charge on use. 200 additional Aether Vent healing.
+- name: Aetheric Attunement
+  description: Percent increase to Lantern Charge gained from attacks. 
+  type: Utility
+  levels:
+    - +10% Lantern Charge. 
+    - +15% Lantern Charge. 
+    - +20% Lantern Charge. 
+    - +30% Lantern Charge. 
+    - +40% Lantern Charge. 
+    - +50% Lantern Charge. 
+- name: Aetheric Frenzy
+  description: Gains a flat amount of Lantern Charge on each weapon hit. 
+  type: Utility
+  levels:
+    - +3 Lantern Charge on Hit. 
+    - +4 Lantern Charge on Hit. 
+    - +5 Lantern Charge on Hit. 
+    - +7.5 Lantern Charge on Hit. 
+    - +10 Lantern Charge on Hit. 
+    - +12.5 Lantern Charge on Hit. 
+- name: Conduit
+  description: Using a Lantern's hold ability increases all Slayers' attack speed temporarily. 
+  type: Utility
+  levels:
+    - Using your lantern hold ability grants 4% attack speed to all Slayers for 8 seconds. 
+    - Using your lantern hold ability grants 6% attack speed to all Slayers for 8 seconds. 
+    - Using your lantern hold ability grants 8% attack speed to all Slayers for 8 seconds.
+    - Using your lantern hold ability grants 10 attack speed to all Slayers for 8 seconds.
+    - Using your lantern hold ability grants 12.5% attack speed to all Slayers for 8 seconds.
+    - Using your lantern hold ability grants 15% attack speed to all Slayers for 8 seconds.
+- name: Energized
+  description: Increases weapon meter gain rate. 
+  type: Utility
+  levels:
+    - +10% Weapon Charge rate.
+    - +15% Weapon Charge rate.
+    - +20% Weapon Charge rate.
+    - +25% Weapon Charge rate.
+    - +30% Weapon Charge rate. 
+    - +40% Weapon Charge rate.
+- name: Engineer
+  description: Reduces healing from Slayer flask. Increases range of pylons. 
+  type: Utility
+  levels:
+    - Your flask heals for 30 less. +35% increase Pylon range. 
+    - Your flask heals for 60 less. +50% increase Pylon range. 
+    - Your flask heals for 90 less. +65% increase Pylon range. 
+    - Your flask heals for 120 less. +80% increase Pylon range.
+    - Your flask heals for 150 less. +115% increase Pylon range.
+    - Your flask heals for 180 less. +150% increase Pylon range. 
+- name: Lucent
+  description: Flask heals over time and generates lantern charge. 
+  type: Utility
+  levels:
+    - Your Flask heals over 20 seconds, but for 20% increased healing. While this heal is active, generate 8 Lantern Charge each second. 
+    - Your Flask heals over 20 seconds, but for 20% increased healing. While this heal is active, generate 16 Lantern Charge each second. 
+    - Your Flask heals over 20 seconds, but for 20% increased healing. While this heal is active, generate 25 Lantern Charge each second. 
+    - Your Flask heals over 20 seconds, but for 20% increased healing. While this heal is active, generate 37,5 Lantern Charge each second. 
+    - Your Flask heals over 20 seconds, but for 20% increased healing. While this heal is active, generate 50 Lantern Charge each second. 
+    - Your Flask heals over 20 seconds, but for 20% increased healing. While this heal is active, generate 75 Lantern Charge each second. 
+- name: Medic
+  description: Improves your ability to revive allies. 
+  type: Utility
+  levels:
+    - When reviving an ally, they are healed an additional 5%.
+    - When reviving an ally, they are healed an additional 10%. 
+    - When reviving an ally, they are healed an additional 20%. 
+    - When reviving an ally, they are healed an additional 20%. Increases Revive Speed by 66%.
+    - When reviving an ally, they are healed an additional 30%. Increases Revive Speed by 66%.
+    - When reviving an ally, they are healed an additional 40%. Increases Revive Speed by 66%. After reviving an ally, gain a 300 health shield for 20 seconds.
+- name: Mender
+  description: Reduces healing from Slayers flask. Using your flask restores other Slayers' health.
+  type: Utility
+  levels:
+    - Your Flask heals for 30 less. Using your Flask also heals all other Slayers for 45.
+    - Your Flask heals for 60 less. Using your Flask also heals all other Slayers for 90.
+    - Your Flask heals for 90 less. Using your Flask also heals all other Slayers for 135.
+    - Your Flask heals for 120 less. Using your Flask also heals all other Slayers for 180.
+    - Your Flask heals for 150 less. Using your Flask also heals all other Slayers for 225.
+    - Your Flask heals for 180 less. Using your Flask also heals all other Slayers for 270. 
+- name: Stunning Vigour
+  description: Restores some health whenever a Behemoth is staggered. 
+  type: Utility
+  levels:
+    - Heal for 50 whenever a Behemoth is Staggered 
+    - Heal for 75 whenever a Behemoth is Staggered 
+    - Heal for 100 whenever a Behemoth is Staggered 
+    - Heal for 125 whenever a Behemoth is Staggered  
+    - Heal for 150 whenever a Behemoth is Staggered 
+    - Heal for 200 whenever a Behemoth is Staggered 
+- name: Vampiric
+  description: Restores some health whenever a Behemoth part is Wounded. 
+  type: Utility 
+  levels:
+    - Heal for 50 whenever a Behemoth is Wounded. 
+    - Heal for 75 whenever a Behemoth is Wounded.
+    - Heal for 100 whenever a Behemoth is Wounded. 
+    - Heal for 125 whenever a Behemoth is Wounded. 
+    - Heal for 150 whenever a Behemoth is Wounded.
+    - Heal for 200 whenever a Behemoth is Wounded.
