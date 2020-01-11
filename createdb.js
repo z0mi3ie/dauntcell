@@ -42,66 +42,65 @@ console.log(`Loaded ${levels.length} levels`);
 const sqlite3 = require('sqlite-async');
 
 const initializeDatabase = async () => {
+    let db = null;
     try {
-        let db = await sqlite3.open('dauntcell.db');
-
-        try {
-            await db.run(`
-            CREATE TABLE cells(
-                name TEXT NOT NULL,
-                description TEXT NOT NULL,
-                type TEXT NOT NULL,
-                levels_id TEXT NOT NULL
-            );
-            `); 
-        } catch (error) {
-            console.log(error)
-        }
-        cells.forEach( async (element) => {
-            try {
-                await db.run(`
-                    INSERT INTO cells (name, description, type, levels_id)
-                    VALUES (?, ?, ?, ?);
-                `, element.name, element.description, element.type, element.levels_id);
-            } catch (error) {
-                console.log(error);
-            }
-        });
-
-        try {
-            await db.run(`
-                CREATE TABLE levels(
-                    levels_id TEXT NOT NULL,
-                    level INTEGER NOT NULL,
-                    description TEXT NOT NULL
-                );
-            `);
-        } catch (error) {
-            console.log(error);
-        }
-
-        levels.forEach( async (element) => {
-            try {
-                await db.run(`
-                    INSERT INTO levels (levels_id, level, description)
-                    VALUES (?, ?, ?);
-                `, element.levels_id, element.level, element.description);
-            } catch (error) {
-                console.log(error);
-            }
-        });
-
-        try {
-            await db.close();
-        } catch (error) {
-            console.log(error);
-        }
-        console.log('database closed')
+        db = await sqlite3.open('dauntcell.db');
     } catch (error) {
-        if (error) {
+        console.log(error)
+    }
+
+    try {
+        await db.run(`
+        CREATE TABLE cells(
+            name TEXT NOT NULL,
+            description TEXT NOT NULL,
+            type TEXT NOT NULL,
+            levels_id TEXT NOT NULL
+        );
+        `); 
+    } catch (error) {
+        console.log(error)
+    }
+    cells.forEach( async (element) => {
+        try {
+            await db.run(`
+                INSERT INTO cells (name, description, type, levels_id)
+                VALUES (?, ?, ?, ?);
+            `, element.name, element.description, element.type, element.levels_id);
+        } catch (error) {
             console.log(error);
         }
+    });
+
+    try {
+        await db.run(`
+            CREATE TABLE levels(
+                levels_id TEXT NOT NULL,
+                level INTEGER NOT NULL,
+                description TEXT NOT NULL
+            );
+        `);
+    } catch (error) {
+        console.log(error);
     }
+
+    levels.forEach( async (element) => {
+        try {
+            await db.run(`
+                INSERT INTO levels (levels_id, level, description)
+                VALUES (?, ?, ?);
+            `, element.levels_id, element.level, element.description);
+        } catch (error) {
+            console.log(error);
+        }
+    });
+
+    try {
+        await db.close();
+    } catch (error) {
+        console.log(error);
+    }
+    console.log('database closed')
 }
 
 initializeDatabase();
