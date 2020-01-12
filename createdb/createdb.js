@@ -2,11 +2,11 @@
 const yaml = require('js-yaml');
 const fs = require('fs');
 
-const Cell = require('./models/Cell');
-const Level = require('./models/Level');
+const Cell = require('../models/Cell');
+const Level = require('../models/Level');
 const uuidv4 = require('uuid/v4');
 
-let cellsFilePath = './cells.yml';
+let cellsFilePath = './createdb/cells.yml';
 let cells = [];
 let levels = [];
 try {
@@ -44,7 +44,7 @@ const sqlite3 = require('sqlite-async');
 const initializeDatabase = async () => {
     let db = null;
     try {
-        db = await sqlite3.open('dauntcell.db');
+        db = await sqlite3.open('./db/dauntcell.db');
     } catch (error) {
         console.log(error)
     }
