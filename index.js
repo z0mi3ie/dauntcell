@@ -1,67 +1,42 @@
-const sqlite3 = require('sqlite3');
-const DB_SOURCE = './db/dauntcell.db';
-
-let db = new sqlite3.Database(DB_SOURCE, err => {
-    if (err) {
-        console.log(err);
-        throw err;
-    }
-    console.log(`Created new db from [${DB_SOURCE}]`);
-});
-
 const express = require('express');
+
+const {Cell} = require('./models/CellPg')
+const {Pool} = require('pg')
 
 const app = express();
 const port = 3000;
 
-sqlGetAllCellsAndLevels = `
-SELECT name, cells.description, type, level, levels.description
-FROM cells
-INNER JOIN levels
-ON cells.levels_id = levels.levels_id;
+// SQL Queries (TODO: move these)
+sqlGetCell = `
+SELECT * from cells;
 `
 
-sqlGetAllCellsWithLevelId = `
-SELECT name, description, type, levels_id 
-`
+// DB Connection Info (TODO: move these)
+const PG_USER = 'docker'
+const PG_PASSWORD = 'docker'
+const PG_HOST = '127.0.0.1'
+const PG_PORT = '5432'
+const PG_DATABASE = 'dauntcell'
 
-class Cell {
-    constructor(name, description, type, levels) {
-        this.name = name;
-        this.description = description;
-        this.type = type;
-        this.levels = levels;
-    }
+const pool = new Pool({
+    user: PG_USER,
+    host: PG_HOST,
+    database: PG_DATABASE,
+    password: PG_PASSWORD,
+    port: PG_PORT,
+  })
+
+const getCell = (req, res) => {
+    console.log(req.query);
+    pool.query(sqlGetCell, (err, results) => {
+        if (err) {
+            throw err;
+        }
+        res.status(200).json(results.rows);
+    });
 }
 
-app.get('/cell', (req, res) => {
-    console.log(req.query);
-
-    let sql = sqlGetAllCellsAndLevels;
-    let params = [];
-    db.all(sql, params, (err, rows) => {
-        if (err) {
-            //res.status(400).json({"error":err.message});
-            return;
-        }
-
-        let cellData = {};
-        rows.forEach(row => {
-            console.log(row);
-        });
-        /*
-        res.json({
-            "message":"success",
-            "data":rows
-        })
-        */
-    });
-
-    res.send({
-            hello: "World",
-            iam: "json"
-        });
-});
+app.get('/cell', getCell);
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}!`);
