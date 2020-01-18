@@ -373,7 +373,7 @@
     - +15 Part Damage on Hit.
     - +20 Part Damage on Hit. +200 Part Damage after dodging through an attack.
     - +30 Part Damage on Hit. +200 Part Damage after dodging through an attack.
-    -	+40 Part Damage on Hit. +400 Part Damage after dodging through an attack.
+    - +40 Part Damage on Hit. +400 Part Damage after dodging through an attack.
 - name: Cunning
   description: Grants a chance to deal double damage.
   type: Technique
