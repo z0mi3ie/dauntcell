@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "rm -f ./db/dauntcell.db && node ./createdb/createdb.js",
+    "start": "nodemon index.js",
+    "createdb": "rm -f ./db/dauntcell.db && node ./createdb/createdb.js",
+    "createpgdb": "node ./createdb/createpgdb.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,7 +20,10 @@
   },
   "homepage": "https://github.com/z0mi3ie/dauntcell#readme",
   "dependencies": {
+    "express": "^4.17.1",
     "js-yaml": "^3.13.1",
+    "nodemon": "^2.0.2",
+    "pg": "^7.17.1",
     "sqlite-async": "^1.0.12",
     "sqlite3": "^4.1.1",
     "uuid": "^3.3.3"
