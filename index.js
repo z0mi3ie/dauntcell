@@ -1,8 +1,9 @@
 const express = require('express');
 
-const {Pool} = require('pg')
+const { Pool } = require('pg')
 
-const {buildWhereClause} = require('./sqlhelpers');
+const { validateQueryParametersMiddleware } = require('./middleware')
+const { buildWhereClause } = require('./sqlhelpers');
 
 const app = express();
 const port = 3000;
@@ -33,7 +34,6 @@ const getCell = (req, res) => {
     });
 }
 
-const { validateQueryParametersMiddleware } = require('./middleware')
 
 app.use(validateQueryParametersMiddleware);
 
