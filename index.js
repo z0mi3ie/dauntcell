@@ -77,8 +77,7 @@ const getCell = (req, res) => {
         return;
     }
 
-    const allowedParams = ['name', 'type', 'description']
-    const {whereStatement, whereValues} = buildWhereClause(req.query, allowedParams)
+    const {whereStatement, whereValues} = buildWhereClause(req.query)
     const completeQuery = 'SELECT * FROM cells ' + whereStatement + ';'
     pool.query(completeQuery, whereValues, (err, results) => {
         if (err) {
