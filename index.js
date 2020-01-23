@@ -1,4 +1,5 @@
 const express = require('express');
+require('dotenv').config()
 
 const { Pool } = require('pg')
 
@@ -6,13 +7,13 @@ const { validateQueryParametersMiddleware } = require('./middleware')
 const { buildWhereClause } = require('./sqlhelpers');
 
 const app = express();
-const port = 3000;
+const APP_PORT = process.env.APP_PORT;
 
-const PG_USER = 'docker'
-const PG_PASSWORD = 'docker'
-const PG_HOST = '127.0.0.1'
-const PG_PORT = '5432'
-const PG_DATABASE = 'dauntcell'
+const PG_USER = process.env.PG_USER;
+const PG_PASSWORD = process.env.PG_PASSWORD;
+const PG_HOST = process.env.PG_HOST;
+const PG_PORT = process.env.PG_PORT;
+const PG_DATABASE = process.env.PG_DATABASE;
 
 const pool = new Pool({
     user: PG_USER,
@@ -39,6 +40,6 @@ app.use(validateQueryParametersMiddleware);
 
 app.get('/cell', getCell);
 
-app.listen(port, () => {
+app.listen(APP_PORT, () => {
     console.log(`** dauntcell API listening on ${port}! **`);
 });

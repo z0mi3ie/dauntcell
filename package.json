@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/z0mi3ie/dauntcell#readme",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "js-yaml": "^3.13.1",
     "knex": "^0.20.8",

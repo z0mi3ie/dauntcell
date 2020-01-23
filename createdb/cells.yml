@@ -76,9 +76,9 @@
   description: Grants a chance to reduce damage, and later the ability to cheat death. 
   type: Defence
   levels:
-    - +5% chance to halve incoming damage 
-    - +8% chance to halve incoming damage 
-    - +12% chance to halve incoming damage 
+    - +5% chance to halve incoming damage.
+    - +8% chance to halve incoming damage.
+    - +12% chance to halve incoming damage. 
     - +12% chance to halve incoming damage. The first time you would be knocked out, stay up and heal for 400.
     - +16% chance to halve incoming damage. The first time you would be knocked out, stay up and heal for 400.
     - +20% chance to halve incoming damage. The first time you would be knocked out, stay up and heal for 400, and become empowered for 10 seconds.
