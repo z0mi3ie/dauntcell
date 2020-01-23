@@ -7,13 +7,17 @@ req.query example
     type: "Power",
 } 
 
-final query will look like: SELECT * FROM cells WHERE (name = 'Aetherhunter' OR name = 'Rage') AND type = 'Power';
+final query will look like: 
+
+SELECT * FROM cells WHERE (name = 'Aetherhunter' OR name = 'Rage') AND type = 'Power';
+
+SELECT * FROM cells WHERE (name = $1 OR name = $2) AND type = $3;
 
 ii = index of current placed sql param (0)
 loop through key and value
     if value is string
 
-
+SELECT * FROM cells WHERE decription LIKE $1
 */
 
 function buildMultiValueParam(key, values, currentValuesLength) {
@@ -62,9 +66,10 @@ function buildWhereClause(search) {
     whereStatements.forEach( (elem, ii) => {
         whereString += elem
     });
-
+    
+    const completeQuery = 'SELECT * FROM cells ' + whereString + ';'
     let builtSql = {
-        whereStatement: whereString,
+        whereStatement: completeQuery,
         whereValues: valueList,
     }
 

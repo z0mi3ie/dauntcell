@@ -25,10 +25,9 @@ const pool = new Pool({
 
 const getCell = (req, res) => {
     const {whereStatement, whereValues} = buildWhereClause(req.query)
-    const completeQuery = 'SELECT * FROM cells ' + whereStatement + ';'
-    pool.query(completeQuery, whereValues, (err, results) => {
+    pool.query(whereStatement, whereValues, (err, results) => {
         if (err) {
-            res.status(400).json(err);
+            res.status(400).json(err); 
             return;
         }
         res.status(200).json(results.rows);
@@ -41,5 +40,5 @@ app.use(validateQueryParametersMiddleware);
 app.get('/cell', getCell);
 
 app.listen(APP_PORT, () => {
-    console.log(`** dauntcell API listening on ${port}! **`);
+    console.log(`** dauntcell API listening on ${APP_PORT}! **`);
 });
