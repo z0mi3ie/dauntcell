@@ -1,6 +1,12 @@
 # dauntcell
 
-This is a small project/tool to help put together gear combinations and builds for the game [Dauntless](https://playdauntless.com).
+This is a small project/tool to help put together gear combinations and builds for the game [Dauntless](https://playdauntless.com). I also wanted to play around with `express.js` and 
+`js` in general for this. 
+
+- `createdb`: data generation to bootstrap database.
+- `db`: `Dockerfile` and scripts for spinning up the database.
+- `models`: data models.
+- `index.js`: horrifying monolithic file that needs to be broken up.
 
 ## API 
 
